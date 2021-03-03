@@ -14,7 +14,7 @@ category:            Flink, Web
 author:              Timothy Bess
 maintainer:          tdbgamer@gmail.com
 
-build-type: Custom
+build-type: Simple
 
 extra-source-files:  CHANGELOG.md
                      README.md
@@ -27,14 +27,10 @@ tested-with: GHC==8.10.2,
 
 source-repository head
   type: git
-  location: https://github.com/tdbgamer/flink-statefulfun-hs.git
-
-custom-setup
-  setup-depends: base, Cabal, proto-lens-setup
+  location: https://github.com/sourcespectrum/flink-statefulfun-hs.git
 
 library
   ghc-options:         -Wall
-  build-tool-depends:  proto-lens-protoc:proto-lens-protoc
   hs-source-dirs:      src
   autogen-modules:     Proto.RequestReply Proto.RequestReply_Fields
                        Proto.Kafka Proto.Kafka_Fields
